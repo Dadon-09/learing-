@@ -1,0 +1,60 @@
+.main-c,
+.header-c,
+.footer-c{
+    height:100%;
+    margin:0 auto;
+    width:1200px;
+}
+.main{
+    width:100%;
+    border-top: 8px solid #f8f8f8;
+}
+.main-c{
+    position: relative;
+    height: 1100px;
+    background: url(../img/bedroom.png) no-repeat left 75px;
+    font-size:14px;
+    color:#767676;
+}
+.main-c a.top{
+    color:#668aca;
+}
+.news{
+    position: absolute;
+    right: 75px;
+    top: 75px;
+    width: 490px;
+    height:800px;
+}
+.news-list{
+    position:relative;
+    width:100%;
+    height:100px;
+    margin-bottom:50px;
+}
+.news h2{
+    font-size:18px;
+    margin-bottom:20px;
+    color: #6b6b6b;
+}
+.news p{
+    font-size:14px;
+    line-height:25px;
+    color:#989898;
+}
+.news .news-list .date{
+    position: absolute;
+    right:0;
+    top:0;
+    width:45px;
+    height: 15px;
+    line-height:15px;
+}
+.bedroom2{
+    position: absolute;
+    left:0px;
+    top:505px;
+    width:600px;
+    height:400px;
+    background: url(../img/bedroom2.png) no-repeat center;
+}

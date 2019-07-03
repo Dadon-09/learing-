@@ -1,0 +1,267 @@
+.header-c,
+    .banner-c,
+    .main-c,
+    .footer-c,
+    .service-c,
+    .news-c,
+    .about-c{
+        width:1200px;
+        height:100%;
+        margin:0 auto;
+    }
+    .header{
+        height:100px;
+        width:100%;
+       
+    }
+    .header-c{
+        /* 头部版心 */
+        position:relative;
+        background: url(../img/logo.png) no-repeat left center;
+    }
+    .header-c .nav{
+        /* 导航栏 */
+        position: absolute;
+        right: 0;
+        top:0;
+        height:100%;
+        color: #767676;
+    }
+    .header-c .nav-item{
+        /* 导航栏具体 */
+        position:relative;
+        float:left;
+        height:100%;
+        margin-right:83px;
+        text-align:center;
+        line-height:100px;
+        font-size:14px;
+        font-weight: bolder;
+    }
+    .header-c .nav-item a{
+        color:#767676;
+    }
+    .header-c .nav-item.end{
+        /* 关于的导航栏 */
+        margin-right:0;
+    }
+    .header .underline{
+        position: absolute;
+        right:8px;
+        bottom:34px;
+        width: 20px;
+        height: 1px;
+        background-color: #668aca;
+        display:none;
+    }
+    .header-c .active .underline{
+        display:block;
+        position:absolute;
+        right:8px;
+        bottom:34px;
+    }
+    .header .nav .active a{
+        color:#668aca;
+        font-size:18px;
+    }
+    .header-c .nav-item:hover a{
+        color:#668aca;
+        font-size: 18px;
+        transition:all ease .5s;
+    }
+    .header-c .nav-item:hover .underline{
+        display:block;
+        transition:all ease .3s;
+    }
+    .banner{
+        width:100%;
+        height:300px;
+        margin-bottom:50px;
+        
+        /* background-size: 100% 100%; */
+    }
+    .banner-c{
+        height: 100%;
+        position: relative;
+        background:url(../img/banner.png) no-repeat center;
+    }
+    .banner-c .scroll{
+        position:absolute;
+        left:547px;
+        bottom:19px;
+    }
+    .scroll .dots{
+        float:left;
+        width:8px;
+        height:8px;
+        background-color: #fff;
+        border:3px solid rgba(255, 255, 255,0);
+        margin-left:16px;
+        border-radius: 50%;
+        background-clip: content-box;
+    }
+
+    .scroll .dots .dots-item{
+        /* a标签设置*/
+        display:block;
+        width:100%;
+        height:100%;
+    }
+    .scroll .dots:hover{
+        background-color: #668aca;
+        border:3px solid #fff;
+    }
+    .scroll .active{
+        background-color: #668aca;
+        border:3px solid #fff;
+        margin-left:0;
+    }
+    .main{
+        width:100%;
+    }
+    .main-c{
+        height:2100px;
+    }
+    .project-1{
+        width:100%;
+        height: 720px;
+    }
+    .tips{
+        position:relative;
+        width:100%;
+        height: 85px;
+        font-size:14px;
+        color:#767676;
+    }
+    .tips a.top{
+        color:#668aca;
+    }
+    .tips-r{
+        position:absolute;
+        top:4px;;
+        right:0;
+    }
+    .tips .tips-item{
+        position:relative;
+        float:left;
+        height:8px;
+        line-height:8px;
+        padding:0 35px;
+        border-right:1px solid gray;
+    }
+    .tips .tips-item.end{
+        border:none;
+        padding-right:0;
+    }
+    .tips .tips-item .tips-h{
+        color:#767676;
+        font-size:14px;
+    }
+    .tips .tips-item .underline{
+        position:absolute;
+        left:45px;
+        bottom:-8px;
+        width:12px;
+        height:1px;
+        background-color: #668aca;
+        display:none;
+    }
+    .tips .tips-item.active .tips-h{
+        color: #668aca;
+        font-size:16px;
+    }
+    .tips .tips-item.active .underline{
+        display:block; 
+    }
+    .project-4 .tips .tips-item.active .underline{
+        left:53px;
+        display:block;
+    }
+    .tips .tips-item:hover .tips-h{
+        color: #668aca;
+        font-size:16px;
+    }
+    .tips .tips-item:hover .underline{
+        display:block;
+    }
+    .tips .tips-item.end:hover .underline{
+        left:53px;
+        display:block;
+    }
+    .show-up{
+        width:100%;
+    }
+    .box{
+        position:relative;
+        float:left;
+        height:290px;
+        width:360px;
+        margin-right:60px;
+        background: url(../img/home-1.png) no-repeat center top;
+    }
+    .box.box-center{
+        background: url(../img/home-2.png) no-repeat center top;
+    }
+    .box.box-right{
+        margin-right:0;
+        background: url(../img/home-3.png) no-repeat center top;
+    }
+    .show-dn .box.box-left{
+        background: url(../img/home-4.png) no-repeat center top;
+    }
+    .show-dn .box.box-center{
+        background: url(../img/home-5.png) no-repeat center top;
+    }
+    .show-dn .box.box-right{
+        background: url(../img/home-6.png) no-repeat center top;
+    }
+    .box .box-under{
+        /* 图片下的文字 */
+        position:absolute;
+        left:50px;
+        bottom:45px;
+        width:100%;
+        height:35px;
+        font-size: 12px;
+        color: #767676;
+        line-height:26px;
+    }
+    .box .oval{
+        position:absolute;
+        right:50px;
+        bottom:42px;
+        width:30px;
+        height:30px;
+        background: url(../img/oval.png) no-repeat center;
+    }
+    .project-2,.project-3,.project-4{
+        width: 100%;
+        height:430px;
+    }
+    .project-2 .show-up .box.box-left{
+        background: url(../img/office-1.png) no-repeat center top;
+    }
+    .project-2 .show-up .box.box-center{
+        background: url(../img/office-2.png) no-repeat center top;
+    }
+    .project-2 .show-up .box.box-right{
+        background: url(../img/office-3.png) no-repeat center top;
+    }
+    .project-3 .show-up .box.box-left{
+        background: url(../img/food-1.png) no-repeat center top;
+    }
+    .project-3 .show-up .box.box-center{
+        background: url(../img/food-2.png) no-repeat center top;
+    }
+    .project-3 .show-up .box.box-right{
+        background: url(../img/food-3.png) no-repeat center top;
+    }
+    .project-4 .show-up .box.box-left{
+        background: url(../img/other-1.png) no-repeat center top;
+    }
+    .project-4 .show-up .box.box-center{
+        background: url(../img/other-2.png) no-repeat center top;
+    }
+    .project-4 .show-up .box.box-right{
+        background: url(../img/other-3.png) no-repeat center top;
+    }

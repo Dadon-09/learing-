@@ -1,0 +1,133 @@
+.main{
+    width:100%;
+    border-top:8px solid #f8f8f8;
+}
+.main-c{
+    position: relative;
+    width:1200px;
+    height:1230px;
+    /* background-color: pink; */
+    margin:0 auto;
+    overflow:hidden;
+}
+.main-c .top{
+    height:14px;
+    font-size:14px;
+    line-height:14px;
+    margin:13px 0 29px 0;  
+    color:#767676;  
+}
+.main .team{
+    width:100%;
+    height:600px;
+}
+.tips{
+    position:relative;
+    width:100%;
+    height: 40px;
+    columns: #6b6b6b;
+}
+.tips .tips-cn{
+    font-size:18px;
+}
+.tips .tips-en{
+    font-size:12px;
+}
+.tips .line{
+    position: absolute;
+    left:0;
+    bottom:0;
+    width:30px;
+    height:1px;
+    background-color: #989898;
+}
+.main .members{
+    width:100%;
+    height:560px;
+}
+.main .team-item{
+    position:relative;
+    float:left;
+    width:550px;
+    height:200px;
+    margin:30px 50px 0 0;
+    background: url(../img/liu.png) no-repeat left center;
+}
+.main .team-item.man-2{
+    background: url(../img/kg.png) no-repeat left center;
+}
+.main .team-item.man-3{
+    background: url(../img/su.png) no-repeat left center;
+}
+.main .team-item.man-4{
+    background: url(../img/cao.png) no-repeat left center;
+}
+.per-info{
+    position:absolute;
+    right:0;
+    top:30px;
+    width:320px;
+    height:135px;
+    columns: #6b6b6b;
+}
+.main .team-item .name{
+    height:16px;
+    line-height:16px;
+    font-size:18px;
+    margin-bottom: 10px;
+}
+.main .team-item .information{
+    height:12px;
+    line-height:12px;
+    font-size:14px;
+}
+.main .team-item .details{
+    font-size:12px;
+    line-height:18px;
+    margin-top: 20px;
+}
+.main .team-item .underline{
+    position: absolute;
+    left: 0;
+    bottom:0;
+    width:60px;
+    height: 1px;
+    background-color: #e2e2e2;
+}
+.main .mission{
+    width:100%;
+    height:240px;
+}
+.mission-text{
+    width:600px;
+    height:150px;
+    margin-top:30px;  
+    text-indent:2em;
+    font-size:14px;
+    line-height:25px; 
+    color:#989898; 
+}
+.mission-text .par-2{
+    margin-top:22px;
+}
+.main .vision{
+    width:100%;
+    height:330px;
+}
+.vision-text{
+    width:600px;
+    height:200px;
+    text-indent:2em;
+    font-size:14px;
+    line-height:25px; 
+    color:#989898;
+    margin-top:30px;
+}
+.main .picture{
+    position:absolute;
+    right:0;
+    bottom:198px;
+    width:500px;
+    height:300px;
+    background: url(../img/room.png) no-repeat center;
+}

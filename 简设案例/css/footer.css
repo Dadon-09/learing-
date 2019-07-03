@@ -1,0 +1,57 @@
+.footer{
+    width:100%; 
+    background-color: #f7f7f7;
+}
+.footer-c{
+    position:relative;
+    height:262px;
+    width:1200px;
+    margin:0 auto;
+}
+.contact{
+    position:absolute;
+    right:0;
+    top:99px;
+    width:100%;
+    height:75px;
+
+}
+.contact .line{
+    float:left;
+    border-right:1px solid gray;
+    height:75px;
+    width:387px;
+    font-size:14px;
+    text-indent:62px;
+    line-height:27px;
+    color:#767676;
+}
+.contact .net{
+    position: relative;
+    text-indent:130px;
+}
+.contact .tel{
+    width:435px;
+}
+.contact .post{
+    width:375px;
+    border:none;
+}
+.contact .net .internet{
+    position:absolute;
+    left:130px;
+    bottom:24px;
+}
+.contact .internet .net-line{
+    float:left;
+    width:25px;
+    height:25px;
+    margin-right:19px;
+    background: url(../img/weibo.png) no-repeat center;
+}
+.contact .internet .net-line.wx{
+    background: url(../img/wx.png) no-repeat center;
+}
+.contact .internet .net-line.qq{
+    background: url(../img/QQ.png) no-repeat center;
+}
