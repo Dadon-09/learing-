@@ -64,6 +64,7 @@ import BScroll from "@better-scroll/core";
 import "swiper/dist/css/swiper.css";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 import { mapState, mapMutations, mapActions, mapGetters } from "vuex";
+let vm = null; //定义一个变量通过它把vue的this传入swiper
 export default {
   name: "",
 
@@ -87,6 +88,14 @@ export default {
           depth: 100,
           modifier: 1,
           slideShadows: true
+        }, //滑动结束后显示电影海报下的电影信息
+        on: {
+          slideChangeTransitionEnd() {
+            vm.index = this.activeIndex;
+            let count = vm.index;
+            let counts = vm.movieData[count].id;
+            vm.choose(counts);
+          }
         }
       },
       //影片海报
@@ -203,6 +212,10 @@ export default {
   },
   created() {
     this.id = this.$route.params.id;
+    vm = this; //把this赋给vm 传入swiper
+    //进入页面显示影片
+    var num = this.movieData[0].id;
+    this.choose(num);
   },
   mounted() {
     let wrapper = document.querySelector(".wrapper");
