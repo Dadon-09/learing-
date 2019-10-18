@@ -5,7 +5,7 @@
       <div @click="go()" class="back">
         <img src="@/assets/imgs/icons/arr-left.png" alt />
       </div>
-      <h3>{{obj.cinema}}</h3>
+      <h3>{{ obj.cinema }}</h3>
       <div class="collect">
         <img src="@/assets/imgs/cinema/xing.png" alt />
       </div>
@@ -18,8 +18,8 @@
             <img src="@/assets/imgs/cinema/position.png" alt />
           </div>
           <div class="address-details">
-            <h3>{{obj.cinema}}</h3>
-            <p>{{obj.address}}</p>
+            <h3>{{ obj.cinema }}</h3>
+            <p>{{ obj.address }}</p>
           </div>
           <div class="arr-right">
             <img src="@/assets/imgs/icons/arr-right.png" alt />
@@ -35,22 +35,22 @@
             </swiper-slide>
           </swiper>
           <div class="movieInfo">
-            <div class="title">{{obj2.moviename}}</div>
-            <div class="info">{{obj2.time}}|{{obj2.type}}|{{obj2.actor}}</div>
+            <div class="title">{{ obj2.moviename }}</div>
+            <div class="info">{{ obj2.time }}|{{ obj2.type }}|{{ obj2.actor }}</div>
           </div>
         </div>
-        <!-- 电影场次信息 -->
+        <!-- 电影场次排片信息 -->
         <div class="show-movie">
-          <div class="show-list" v-for="item in showData" :key="item.id">
+          <div class="show-list" v-for="item in showDatas.showData" :key="item.id">
             <div class="time">
-              <div class="start">{{item.start}}</div>
-              <div class="end">{{item.end}}</div>
+              <div class="start">{{ item.start }}</div>
+              <div class="end">{{ item.end }}</div>
             </div>
             <div class="info">
-              <div class="type">{{item.info}}</div>
-              <div class="room">{{item.room}}</div>
+              <div class="type">{{ item.info }}</div>
+              <div class="room">{{ item.room }}</div>
             </div>
-            <div class="price">{{item.price}}元</div>
+            <div class="price">{{ item.price }}元</div>
             <div class="sales" @click="to()">购票</div>
           </div>
         </div>
@@ -75,6 +75,7 @@ export default {
   data() {
     return {
       id: "",
+      ids: 111,
       obj2: {},
       //swiper控制
       selectOptions: {
@@ -88,13 +89,14 @@ export default {
           depth: 100,
           modifier: 1,
           slideShadows: true
-        }, //滑动结束后显示电影海报下的电影信息
+        },
+        //滑动结束后显示电影海报下的电影信息
         on: {
           slideChangeTransitionEnd() {
-            vm.index = this.activeIndex;
-            let count = vm.index;
-            let counts = vm.movieData[count].id;
-            vm.choose(counts);
+            let count = this.activeIndex;
+            let num = vm.movieData[count].id;
+            vm.ids = num;
+            vm.choose(num);
           }
         }
       },
@@ -106,7 +108,50 @@ export default {
           time: "119分钟",
           type: "剧情",
           actor: "周冬雨",
-          imgSrc: require("@/assets/imgs/cinema/movie_1.png")
+          imgSrc: require("@/assets/imgs/cinema/movie_1.png"),
+          //电影拍片数据
+          showData: [
+            {
+              id: 1,
+              start: "08:30",
+              end: "10:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 2,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 3,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 4,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 5,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            }
+          ]
         },
         {
           id: 112,
@@ -114,15 +159,101 @@ export default {
           time: "135分钟",
           type: "喜剧",
           actor: "金正雅",
-          imgSrc: require("@/assets/imgs/cinema/movie_2.png")
+          imgSrc: require("@/assets/imgs/cinema/movie_2.png"),
+          //电影拍片数据
+          showData: [
+            {
+              id: 1,
+              start: "09:44",
+              end: "11:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 2,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 3,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 4,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 5,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            }
+          ]
         },
         {
           id: 113,
-          moviename: "后来的我们",
+          moviename: "梅子鸡之味",
           time: "119分钟",
           type: "剧情",
           actor: "周冬雨",
-          imgSrc: require("@/assets/imgs/cinema/movie_3.png")
+          imgSrc: require("@/assets/imgs/cinema/movie_3.png"),
+          //电影拍片数据
+          showData: [
+            {
+              id: 1,
+              start: "11:30",
+              end: "13:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 2,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 3,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 4,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 5,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            }
+          ]
         },
         {
           id: 114,
@@ -130,7 +261,50 @@ export default {
           time: "119分钟",
           type: "剧情",
           actor: "周冬雨",
-          imgSrc: require("@/assets/imgs/cinema/movie_4.png")
+          imgSrc: require("@/assets/imgs/cinema/movie_4.png"),
+          //电影拍片数据
+          showData: [
+            {
+              id: 1,
+              start: "13:10",
+              end: "16:54散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 2,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 3,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 4,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 5,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            }
+          ]
         },
         {
           id: 115,
@@ -138,50 +312,50 @@ export default {
           time: "119分钟",
           type: "剧情",
           actor: "周冬雨",
-          imgSrc: require("@/assets/imgs/cinema/movie_5.png")
-        }
-      ],
-      //电影拍片数据
-      showData: [
-        {
-          id: 1,
-          start: "15:30",
-          end: "17:34散场",
-          info: "原版3D",
-          room: "2号厅",
-          price: 30.9
-        },
-        {
-          id: 2,
-          start: "15:30",
-          end: "17:34散场",
-          info: "原版3D",
-          room: "2号厅",
-          price: 30.9
-        },
-        {
-          id: 3,
-          start: "15:30",
-          end: "17:34散场",
-          info: "原版3D",
-          room: "2号厅",
-          price: 30.9
-        },
-        {
-          id: 4,
-          start: "15:30",
-          end: "17:34散场",
-          info: "原版3D",
-          room: "2号厅",
-          price: 30.9
-        },
-        {
-          id: 5,
-          start: "15:30",
-          end: "17:34散场",
-          info: "原版3D",
-          room: "2号厅",
-          price: 30.9
+          imgSrc: require("@/assets/imgs/cinema/movie_5.png"),
+          //电影拍片数据
+          showData: [
+            {
+              id: 1,
+              start: "19:30",
+              end: "21:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 2,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 3,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 4,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            },
+            {
+              id: 5,
+              start: "15:30",
+              end: "17:34散场",
+              info: "原版3D",
+              room: "2号厅",
+              price: 30.9
+            }
+          ]
         }
       ]
     };
@@ -193,11 +367,11 @@ export default {
     },
     //跳转购买页
     to() {
-      this.$router.push("/");
+      this.$router.push("/chooseSeats");
     },
     //选择影片
     choose(val) {
-      console.log(val);
+      // console.log(val);
       var item = this.movieData.find(ele => ele.id === val);
       this.obj2 = item;
     }
@@ -208,7 +382,14 @@ export default {
       obj: function(state) {
         return state.cinema.cinemaData.find(ele => ele.id == this.id);
       }
-    })
+    }),
+    showDatas: function() {
+      if (this.ids == "") {
+        return this.movieData[0].showData;
+      } else if (this.movieData.find(ele => ele.id === this.ids)) {
+        return this.movieData.find(ele => ele.id === this.ids);
+      }
+    }
   },
   created() {
     this.id = this.$route.params.id;
@@ -276,6 +457,7 @@ export default {
     .content {
       width: 335px;
       margin: 20px 20px;
+      padding-bottom: 30px;
       .address {
         width: 100%;
         height: 40px;
