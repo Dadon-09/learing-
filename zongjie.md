@@ -78,7 +78,9 @@
         <option value="2">周杰伦</option>
         <option value="3">刘德华</option>
     </select>
+    ```
 * textarea 文本域
+    
     * cols文本的宽度 rows文本的高度
 
 
@@ -123,6 +125,7 @@
          margin:0;
          padding:0;
         }
+        ~~~
 * 复杂选择器
     * 交集选择器
     ~~~css
@@ -245,4 +248,5 @@ font-weight|字体加粗|bolder(粗)lighter(细)normal/100-900数字越大越粗
 ### 布局
 - 流式布局 自上而下 由左至右 尽量用文档流 文档流解决不了在采用浮动 浮动不行采用定位 左浮动 右定位.
 
+### 测试
 
